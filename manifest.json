@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "name": "StackOverview",
   "author": "Jason Wang",
-  "description": "Quick stats on StackOverflow posts",
+  "description": "Quick stats on StackOverflow and StackExchange posts",
   "content_scripts": [
     {
       "matches": ["http://www.google.com/*", "https://www.google.com/*"],

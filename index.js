@@ -4,8 +4,7 @@
         req.onreadystatechange = function() {
             //when we get a response
             if (req.readyState === 4) {
-                var re = /answerCount">(.*?)</;
-                var possibleAnswers = re.exec(req.responseText);
+                var possibleAnswers = /(?:answerCount">)(.*?)</.exec(req.responseText);
                 var answerCount = possibleAnswers ? possibleAnswers[1] : 0;
 
                 //if there is at least one answer
