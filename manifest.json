@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "name": "StackOverview",
   "author": "Jason Wang",
-  "description": "Quick stats on StackOverflow and StackExchange posts from Google search results",
+  "description": "View quick stats about StackOverflow and StackExchange posts from Google search results",
   "content_scripts": [
     {
       "matches": ["http://www.google.com/*", "https://www.google.com/*"],
@@ -15,8 +15,7 @@
     "http://*.stackoverflow.com/*",
     "https://*.stackoverflow.com/*",
     "http://*.stackexchange.com/*",
-    "https://*.stackexchange.com/*",
-    "tabs"
+    "https://*.stackexchange.com/*"
    ],
    "icons": {
        "48": "icons/so48trans.png",
