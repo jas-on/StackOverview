@@ -44,7 +44,7 @@
     for(var i = 0; i < links.length; ++i) {
         //support StackOverflow and StackExchange
         if (links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackoverflow.com\/questions\/[0-9]*\//) ||
-                links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com\/questions\/[0-9]*\//)) {
+            links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com\/questions\/[0-9]*\//)) {
             var href = links[i].href;
             //use https
             if (isSecureSearch) {

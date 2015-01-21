@@ -19,7 +19,7 @@
     "tabs"
    ],
    "icons": {
-       "48":,
-       "128":
+       "48": "icons/so48trans.png",
+       "128": "icons/so128trans.png"
    }
 }
