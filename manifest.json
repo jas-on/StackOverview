@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "StackOverview",
+  "author": "Jason Wang",
+  "description": "Quick stats on StackOverflow posts",
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*", "https://www.google.com/*"],
+      "css": ["style.css"],
+      "js": ["index.js"]
+    }
+  ],
+  "permissions": [
+    "http://*.stackoverflow.com/*",
+    "https://*.stackoverflow.com/*",
+    "http://*.stackexchange.com/*",
+    "https://*.stackexchange.com/*"
+   ]
+}
