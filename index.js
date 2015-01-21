@@ -33,18 +33,25 @@
             }
         };
 
-        req.open('GET', link.href, true);
+        req.open('GET', link.mod_href, true);
         req.send(null);
     }
+    //determine if we're viewing google search as https
+    var isSecureSearch = window.location.origin.match(/^https/);
 
     //get all of the search results
     var links = document.getElementsByTagName("a");
     for(var i = 0; i < links.length; ++i) {
         //support StackOverflow and StackExchange
         if (links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackoverflow.com\/questions\/[0-9]*\//) ||
-            links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com\/questions\/[0-9]*\//)) {
+                links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com\/questions\/[0-9]*\//)) {
+            var href = links[i].href;
             //use https
-            links[i].href = links[i].href.replace(/http(?!s)/, "https");
+            if (isSecureSearch) {
+                href = links[i].href.replace(/http(?!s)/, "https");
+            }
+
+            links[i].mod_href = href;
             checkPage(links[i]);
         }
     }

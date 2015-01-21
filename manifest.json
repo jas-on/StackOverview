@@ -15,7 +15,8 @@
     "http://*.stackoverflow.com/*",
     "https://*.stackoverflow.com/*",
     "http://*.stackexchange.com/*",
-    "https://*.stackexchange.com/*"
+    "https://*.stackexchange.com/*",
+    "tabs"
    ],
    "icons": {
        "48":,
