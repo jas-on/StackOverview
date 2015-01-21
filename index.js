@@ -41,8 +41,8 @@
     var links = document.getElementsByTagName("a");
     for(var i = 0; i < links.length; ++i) {
         //support StackOverflow and StackExchange
-        if (links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackoverflow.com/) ||
-            links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com/)) {
+        if (links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackoverflow.com\/questions\/[0-9]*\//) ||
+            links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com\/questions\/[0-9]*\//)) {
             //use https
             links[i].href = links[i].href.replace(/http(?!s)/, "https");
             checkPage(links[i]);
