@@ -8,7 +8,8 @@
     {
       "matches": ["http://www.google.com/*", "https://www.google.com/*"],
       "css": ["style.css"],
-      "js": ["index.js"]
+      "js": ["index.js"],
+      "run_at": "document_end"
     }
   ],
   "permissions": [
