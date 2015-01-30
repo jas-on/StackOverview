@@ -6,7 +6,7 @@
   "description": "View quick stats about StackOverflow and StackExchange posts from Google search results",
   "content_scripts": [
     {
-      "matches": ["http://www.google.com/*", "https://www.google.com/*"],
+      "matches": ["http://www.google.com/*", "https://www.google.com/*", "http://www.google.ca/*", "https://www.google.ca/*"],
       "css": ["style.css"],
       "js": ["index.js"],
       "run_at": "document_end"
