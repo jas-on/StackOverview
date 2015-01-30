@@ -1,25 +1,29 @@
 {
-  "manifest_version": 2,
-  "version": "1.0.2",
-  "name": "StackOverview",
-  "author": "Jason Wang",
-  "description": "View quick stats about StackOverflow and StackExchange posts from Google search results",
-  "content_scripts": [
-    {
-      "matches": ["http://www.google.com/*", "https://www.google.com/*", "http://www.google.ca/*", "https://www.google.ca/*"],
-      "css": ["style.css"],
-      "js": ["index.js"],
-      "run_at": "document_end"
+    "manifest_version": 2,
+    "version": "1.0.4",
+    "name": "StackOverview",
+    "author": "Jason Wang",
+    "description": "View quick stats about StackOverflow and StackExchange posts from Google search results",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.google.com/*",
+                "*://www.google.ca/*"
+            ],
+            "css": ["style.css"],
+            "js": ["index.js"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "permissions": [
+        "http://*.stackoverflow.com/*",
+        "https://*.stackoverflow.com/*",
+        "http://*.stackexchange.com/*",
+        "https://*.stackexchange.com/*"
+    ],
+    "icons": {
+        "48": "icons/so48trans.png",
+        "128": "icons/so128trans.png"
     }
-  ],
-  "permissions": [
-    "http://*.stackoverflow.com/*",
-    "https://*.stackoverflow.com/*",
-    "http://*.stackexchange.com/*",
-    "https://*.stackexchange.com/*"
-   ],
-   "icons": {
-       "48": "icons/so48trans.png",
-       "128": "icons/so128trans.png"
-   }
 }
