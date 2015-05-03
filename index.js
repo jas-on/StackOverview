@@ -36,24 +36,25 @@
 
             req.open('GET', link.mod_href, true);
             req.send(null);
-        };
+        }
 
         //determine if we're viewing google search as https
         var isSecureSearch = window.location.origin.match(/^https/);
 
         //get all of the search results
         var links = document.getElementsByTagName("a");
-        for(var i = 0; i < links.length; ++i) {
+        var i, possibleBadge, href;
+        for(i = 0; i < links.length; ++i) {
             //support StackOverflow and StackExchange
             if (links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackoverflow.com\/questions\/[0-9]*\//) ||
                 links[i].href.match(/http(s)?:\/\/[a-zA-Z.]*stackexchange.com\/questions\/[0-9]*\//)) {
 
-                var possibleBadge = links[i].parentNode.nextSibling.firstChild.firstChild.firstChild;
+                possibleBadge = links[i].parentNode.nextSibling.firstChild.firstChild.firstChild;
                 if (possibleBadge.className.indexOf("badge") > -1) {
                     continue;
                 }
 
-                var href = links[i].href;
+                href = links[i].href;
                 if (isSecureSearch) {
                     href = links[i].href.replace(/http(?!s)/, "https");
                 }
